@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>ANSPORT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2 class="logo">ANSPORT</h2>
+    <ul>
+        <li class="active" onclick="showPage('home', this)">Home</li>
+        <li onclick="showPage('produk', this)">Produk</li>
+        <li onclick="showPage('tentang', this)">Tentang</li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="page active">
+    <h1>Welcome</h1>
+    <p>Toko sport</p>Menyediakan kebutuhan badminton kalian <br><br>
+    <button class="btn" onclick="showPage('produk')">Lihat Produk</button>
+</section>
+
+<!-- PRODUK -->
+<section id="produk" class="page">
+    <h1>Produk Kami</h1>
+
+    <div class="produk-list">
+        <div class="card">
+            <img src="raketyonex.jpg"> 
+            <h3>raket-Yonex</h3>
+            <p>Rp 950.000</p>
+            <button class="popup-buy-btn" onclick="openPopup()">
+  🛒 BUY
+</button>
+
+        </div>
+
+        <div class="card">
+            <img src="jersey.jpg"><br><br> <br><br>
+        
+            <h3>jersey</h3>
+            <p>Rp 300.000</p>
+            <button class="buy-btn" onclick="openBuyPopup()">
+  🛒 BUY
+        </div>
+
+        <div class="card">
+            <img src="shuftelkock Yonex.jpg">
+            <h3>shuftelkock Yonex</h3>
+            <p>Rp 200.000</p>
+            <button class="buy-btn" onclick="openBuyPopup()">
+  🛒 BUY
+</button>
+        </div>
+        
+        <div class="card">
+          <img src="Sepatu.jpg"> 
+          <h3>Sepatu</h3>
+          <p>Rp 500.000</p>
+          <button class="buy-btn" onclick="openBuyPopup()">
+  🛒 BUY
+</button>
+        </div>
+        
+        <div class="card">
+        <img src="Senar raket.jpg">
+        <h3>Senar raket</h3>
+        <p>Rp 50.000</p>
+        <button class="buy-btn" onclick="openBuyPopup()">
+  🛒 BUY
+</button>
+
+        </div>
+        
+        <div class="card">
+          <img src="Grip.png">
+          <h3>Grip</h3>
+          <p>Rp 20.000</p>
+          <button class="buy-btn" onclick="openBuyPopup()">
+  🛒 BUY
+</button>
+        </div>
+    </div>
+    
+    
+</section>
+
+<section>
+<!-- TENTANG -->
+   <div id="tentang" class="page">
+  
+    
+    <h2>Tentang Kami</h2>
+    <p> <br><br>
+     ANSPORT adalah toko perlengkapan olahraga yang menyediakan berbagai kebutuhan badminton dan olahraga lainnya dengan kualitas terbaik dan harga terjangkau.<br><br>
+     
+    Kami menyediakan berbagai perlengkapan olahraga seperti raket, jersey, sepatu, shuttlecock, senar raket, grip, dan aksesoris olahraga lainnya. <br><br>
+    </p>
+    <p><strong>Alamat:</strong> Jl. Imogiri Barat KM 10</p>
+
+    <a href="https://wa.me/62895614690507" target="_blank" class="wa-btn">
+      💬 Hubungi via WhatsApp
+    </a>
+  </div>
+</div>
+</section>
+
+
+<script>
+function showPage(pageId, element = null) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    const target = document.getElementById(pageId);
+    target.classList.add('active');
+
+    document.querySelectorAll('nav li').forEach(li => {
+        li.classList.remove('active');
+    });
+
+    if (element) element.classList.add('active');
+}
+</script>
+
+</body>
+</html>
